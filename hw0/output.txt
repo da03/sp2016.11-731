@@ -4,4 +4,4 @@ name:
    last: Deng
 email: yuntiand@cs.cmu.edu
 leaderboard: cloudyclouds
-languages: [eng,chn]
+languages: [eng,chi]
