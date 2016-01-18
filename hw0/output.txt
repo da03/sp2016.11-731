@@ -1,7 +1,7 @@
 ---
 name:
-   first: Chris
-   last: Dyer
-email: cdyer@cs.cmu.edu
-leaderboard: ProfDyer
-languages: [eng,deu]
+   first: Yuntian
+   last: Deng
+email: yuntiand@cs.cmu.edu
+leaderboard: cloudyclouds
+languages: [eng,chn]
