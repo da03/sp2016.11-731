@@ -1,3 +1,39 @@
+# Algorithm:
+SVM. The features being used are: ngram precision, ngram recall, pos ngram precision, pos ngram recall, where n runs from 1 to 4.
+
+The commands to produce output file is:
+
+```
+python generate_feature.py data/train-test.hyp1-hyp2-ref features
+```
+
+This will generate features. Then
+
+```
+python create_train.py features data/train.gold train.libsvm
+```
+
+This will create training libsvm format file. Then
+
+```
+./svm_learn train.libsvm model
+```
+
+This will learn the model. Then
+
+```
+python create_test.py features test.libsvm
+```
+
+This will produce the test file. Then
+
+```
+./svm_classify test.libsvm model output.txt
+```
+
+This will output the final file.
+
+
 There are three Python programs here (`-h` for usage):
 
  - `./evaluate` evaluates pairs of MT output hypotheses relative to a reference translation using counts of matched words
@@ -16,3 +52,4 @@ The `data/` directory contains the following two files:
  - `data/train.gold` contains gold standard human judgements indicating whether the first hypothesis (hyp1) or the second hypothesis (hyp2) is better or equally good/bad for training data.
 
 Until the deadline the scores shown on the leaderboard will be accuracy on the training set. After the deadline, scores on the blind test set will be revealed and used for final grading of the assignment.
+
